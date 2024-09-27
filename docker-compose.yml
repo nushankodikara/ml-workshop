@@ -1,0 +1,6 @@
+services:
+  modelapi:
+    name: model-API
+    image: nushankodi/ml-workshop-modelapi:V1
+    ports:
+      - "8000:8000"
