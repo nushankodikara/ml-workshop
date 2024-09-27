@@ -21,9 +21,8 @@ jobs:
 
     - name: Build the Docker image
       run: |
-        docker build . --file Dockerfile --tag ml-workshop-modelapi:$(date +%s)
+        docker build . --file Dockerfile --tag ml-workshop-modelapi:latest
 
     - name: Push the Docker image
       run: |
-        docker tag ml-workshop-modelapi:$(date +%s) ${{ secrets.DOCKER_USERNAME }}/ml-workshop-modelapi:latest
         docker push ${{ secrets.DOCKER_USERNAME }}/ml-workshop-modelapi:latest
